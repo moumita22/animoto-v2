@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model MovieReview {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  year        Int
+  genre       String
+  language    String   @default("English")
+  director    String
+  rating      Float    // e.g. 8.8 out of 10
+  posterUrl   String   @map("poster_url")
+  backdropUrl String   @map("backdrop_url")
+  trailerUrl  String?  @map("trailer_url") // YouTube trailer link
+  synopsis    String   @db.Text
+  lifeLessons String   @map("life_lessons") @db.Text
+  searchVector Unsupported("tsvector")? @map("search_vector")
+  featured    Boolean  @default(false)
+  published   Boolean  @default(true)
+  views       Int      @default(0)
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("movie_reviews")
+  @@index([slug])
+  @@index([rating])
+  @@index([genre])
+  @@index([language])
+  @@index([year])
+}
+
+model AdminUser {
+  id           Int      @id @default(autoincrement())
+  username     String   @unique
+  passwordHash String   @map("password_hash")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  @@map("admin_users")
+}
