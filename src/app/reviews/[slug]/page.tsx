@@ -173,7 +173,7 @@ export default async function ReviewDetailPage({ params }: Props) {
           </div>
 
           {/* Title & Metadata Sitting at the Bottom */}
-          <div className="absolute bottom-6 left-0 right-0 z-20 max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="absolute bottom-6 left-0 right-0 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap items-center gap-2 mb-3">
               <span className="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-amber-500 text-zinc-950 shadow">
                 {movie.genre}
@@ -205,61 +205,37 @@ export default async function ReviewDetailPage({ params }: Props) {
         </section>
 
         {/* Content Body Layout */}
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           
           {/* Top Banner Ad */}
           <AdBanner slot="review-top" format="horizontal" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 mt-6 items-start">
             
-            {/* Left 2 Columns: Review & Learnings */}
-            <div className="lg:col-span-2 space-y-10">
+            {/* Left 8 Columns: Big Review & Learnings */}
+            <div className="lg:col-span-8 space-y-8">
               
               {/* Plot & Critical Review (Formatted with Markdown: Bold, Italic, Underline) */}
-              <article className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#12141e] border border-zinc-200 dark:border-zinc-800/80 shadow-sm">
-                <h2 className="text-xl font-black tracking-tight text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
-                  <Film className="w-5 h-5 text-amber-500" />
+              <article className="p-6 sm:p-10 rounded-3xl bg-white dark:bg-[#12141e] border border-zinc-200 dark:border-zinc-800/80 shadow-sm">
+                <h2 className="text-2xl font-black tracking-tight text-zinc-900 dark:text-white mb-6 flex items-center gap-2.5 pb-4 border-b border-zinc-100 dark:border-zinc-800/80">
+                  <Film className="w-6 h-6 text-amber-500" />
                   Review &amp; Cinematic Analysis
                 </h2>
                 <div
-                  className="markdown-content text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed"
+                  className="markdown-content text-sm sm:text-[15px] text-zinc-700 dark:text-zinc-300 leading-relaxed space-y-3"
                   dangerouslySetInnerHTML={{
                     __html: renderMarkdown(movie.synopsis),
                   }}
                 />
               </article>
 
-              {/* Official Movie Trailer */}
-              {trailerEmbedUrl && (
-                <section className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#12141e] border border-zinc-200 dark:border-zinc-800/80 shadow-sm">
-                  <div className="flex items-center justify-between mb-4">
-                    <h2 className="text-xl font-black tracking-tight text-zinc-900 dark:text-white flex items-center gap-2">
-                      <Play className="w-5 h-5 text-amber-500 fill-amber-500" />
-                      Official Trailer
-                    </h2>
-                    <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-500 border border-amber-500/30">
-                      HD Preview
-                    </span>
-                  </div>
-                  <div className="relative aspect-video rounded-2xl overflow-hidden bg-black shadow-xl border border-zinc-200 dark:border-zinc-800">
-                    <iframe
-                      src={trailerEmbedUrl}
-                      title={`${movie.title} Official Trailer`}
-                      className="w-full h-full"
-                      allowFullScreen
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    />
-                  </div>
-                </section>
-              )}
-
               {/* In-Article Mid Ad */}
               <AdBanner slot="review-mid" format="horizontal" label="Advertisement" />
 
               {/* Key Learnings & Takeaways Section */}
-              <section className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-amber-500/10 via-amber-500/5 to-white/70 dark:from-amber-500/15 dark:via-zinc-900/80 dark:to-transparent border border-amber-500/30 shadow-md">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-11 h-11 rounded-2xl bg-amber-500 flex items-center justify-center text-zinc-950 shadow-lg shadow-amber-500/30">
+              <section className="p-6 sm:p-10 rounded-3xl bg-gradient-to-br from-amber-500/10 via-amber-500/5 to-white/70 dark:from-amber-500/15 dark:via-zinc-900/80 dark:to-transparent border border-amber-500/30 shadow-md">
+                <div className="flex items-center gap-3.5 mb-6 pb-4 border-b border-amber-500/20">
+                  <div className="w-12 h-12 rounded-2xl bg-amber-500 flex items-center justify-center text-zinc-950 shadow-lg shadow-amber-500/30">
                     <Lightbulb className="w-6 h-6 fill-zinc-950" />
                   </div>
                   <div>
@@ -276,11 +252,11 @@ export default async function ReviewDetailPage({ params }: Props) {
                   {lessons.map((lesson, idx) => (
                     <div
                       key={idx}
-                      className="p-5 rounded-2xl bg-white/95 dark:bg-zinc-900/90 backdrop-blur-md border border-zinc-200/80 dark:border-zinc-800 flex items-start gap-3.5 shadow-2xs hover:border-amber-500/50 transition-colors"
+                      className="p-5 sm:p-6 rounded-2xl bg-white/95 dark:bg-zinc-900/90 backdrop-blur-md border border-zinc-200/80 dark:border-zinc-800 flex items-start gap-3.5 shadow-2xs hover:border-amber-500/50 transition-colors"
                     >
                       <Sparkles className="w-4 h-4 text-amber-500 flex-shrink-0 mt-1" />
                       <div
-                        className="markdown-content text-sm font-medium text-zinc-800 dark:text-zinc-200 leading-relaxed"
+                        className="markdown-content text-xs sm:text-sm font-medium text-zinc-800 dark:text-zinc-200 leading-relaxed"
                         dangerouslySetInnerHTML={{
                           __html: renderMarkdown(lesson),
                         }}
@@ -295,12 +271,12 @@ export default async function ReviewDetailPage({ params }: Props) {
 
             </div>
 
-            {/* Right Sidebar: Tall Poster Card + Quick Verdict */}
-            <aside className="space-y-6">
+            {/* Right 4 Columns: Sticky Sidebar with Poster, Quick Verdict, and Video Trailer */}
+            <aside className="lg:col-span-4 space-y-6">
               
-              {/* Sticky Movie Poster Card */}
-              <div className="p-5 rounded-3xl bg-white dark:bg-[#12141e] border border-zinc-200 dark:border-zinc-800/80 shadow-md sticky top-24">
-                <div className="rounded-2xl overflow-hidden aspect-[2/3] bg-zinc-950 mb-2 shadow-xl border border-zinc-200 dark:border-zinc-800">
+              {/* Movie Poster Card & Quick Verdict */}
+              <div className="p-5 sm:p-6 rounded-3xl bg-white dark:bg-[#12141e] border border-zinc-200 dark:border-zinc-800/80 shadow-md">
+                <div className="rounded-2xl overflow-hidden aspect-[2/3] bg-zinc-950 mb-3 shadow-xl border border-zinc-200 dark:border-zinc-800">
                   <img
                     src={movie.posterUrl}
                     alt={movie.title}
@@ -340,12 +316,35 @@ export default async function ReviewDetailPage({ params }: Props) {
                     <span className="font-bold text-zinc-900 dark:text-zinc-200">{movie.language}</span>
                   </div>
                 </div>
+              </div>
 
-                {/* Sidebar Ad Slot */}
-                <div className="mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800/80">
-                  <AdBanner slot="sidebar-display" format="rectangle" />
-                </div>
+              {/* Official Movie Trailer (Right Sidebar) */}
+              {trailerEmbedUrl && (
+                <section className="p-5 sm:p-6 rounded-3xl bg-white dark:bg-[#12141e] border border-zinc-200 dark:border-zinc-800/80 shadow-md">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-base font-black tracking-tight text-zinc-900 dark:text-white flex items-center gap-2">
+                      <Play className="w-4 h-4 text-amber-500 fill-amber-500" />
+                      Official Trailer
+                    </h3>
+                    <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-500 border border-amber-500/30">
+                      HD Preview
+                    </span>
+                  </div>
+                  <div className="relative aspect-video rounded-2xl overflow-hidden bg-black shadow-lg border border-zinc-200 dark:border-zinc-800">
+                    <iframe
+                      src={trailerEmbedUrl}
+                      title={`${movie.title} Official Trailer`}
+                      className="w-full h-full"
+                      allowFullScreen
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    />
+                  </div>
+                </section>
+              )}
 
+              {/* Sidebar Display Ad */}
+              <div className="p-4 rounded-3xl bg-white dark:bg-[#12141e] border border-zinc-200 dark:border-zinc-800/80 shadow-sm">
+                <AdBanner slot="sidebar-display" format="rectangle" />
               </div>
 
             </aside>
