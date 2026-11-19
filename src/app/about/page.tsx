@@ -3,8 +3,8 @@ import Footer from '@/components/Footer';
 import { Film, Target, Award, ShieldCheck } from 'lucide-react';
 
 export const metadata = {
-  title: 'About Animoto | Movie Reviews & Learnings',
-  description: 'Our mission and review methodology at Animoto.',
+  title: 'About AnimoView | Movie Reviews & Learnings',
+  description: 'Our mission and review methodology at AnimoView.',
 };
 
 export default function AboutPage() {
@@ -18,7 +18,7 @@ export default function AboutPage() {
             Our Mission &amp; Editorial Standards
           </div>
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-zinc-900 dark:text-white">
-            About Animoto
+            About AnimoView
           </h1>
           <p className="text-sm text-zinc-500 dark:text-zinc-400 max-w-xl mx-auto mt-3">
             More than just entertainment — extracting psychological insights, resilience, and philosophical wisdom from cinema.
@@ -32,7 +32,7 @@ export default function AboutPage() {
               Why We Review Movies Through Learnings
             </h2>
             <p>
-              Cinema is one of humanity&apos;s greatest storytelling mediums. While many review platforms focus purely on box office numbers or technical effects, <strong>Animoto</strong> exists to answer a deeper question: <em>What can this film teach us about real life, adversity, ambition, and relationships?</em>
+              Cinema is one of humanity&apos;s greatest storytelling mediums. While many review platforms focus purely on box office numbers or technical effects, <strong>AnimoView</strong> exists to answer a deeper question: <em>What can this film teach us about real life, adversity, ambition, and relationships?</em>
             </p>
           </section>
 
@@ -42,7 +42,7 @@ export default function AboutPage() {
               Our Review &amp; Scoring Methodology
             </h2>
             <p className="mb-4">
-              Every score on Animoto (ranging from 1.0 to 10.0) is personally evaluated based on:
+              Every score on AnimoView (ranging from 1.0 to 10.0) is personally evaluated based on:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-sm">
               <li><strong>Narrative &amp; Emotional Depth:</strong> How genuinely the story connects and impacts the human experience.</li>
@@ -57,7 +57,7 @@ export default function AboutPage() {
               Independent &amp; Free
             </h2>
             <p>
-              Animoto is completely free for all readers. We sustain our operations through respectful advertising via Google AdSense. We do not accept sponsored positive reviews.
+              AnimoView is completely free for all readers. We sustain our operations through respectful advertising via Google AdSense. We do not accept sponsored positive reviews.
             </p>
           </section>
         </div>

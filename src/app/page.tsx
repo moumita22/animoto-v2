@@ -177,12 +177,12 @@ export default async function HomePage({ searchParams }: PageProps) {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Animoto',
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://animoto.com',
+    name: 'AnimoView',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://animoview.com',
     description: 'Curated movie reviews and profound wisdom extracted from world cinema.',
     potentialAction: {
       '@type': 'SearchAction',
-      target: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://animoto.com'}/?q={search_term_string}`,
+      target: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://animoview.com'}/?q={search_term_string}`,
       'query-input': 'required name=search_term_string',
     },
   };

@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://animoto.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://animoview.com'),
   title: {
-    default: 'Animoto | Curated Movie Reviews & Learnings',
-    template: '%s | Animoto',
+    default: 'AnimoView | Curated Movie Reviews & Learnings',
+    template: '%s | AnimoView',
   },
   description:
     'Discover curated movie reviews, critical ratings, and profound learnings on resilience, psychology, and personal growth from world cinema.',
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     'movie reviews',
     'learnings from movies',
     'movie philosophy',
-    'animoto reviews',
+    'animoview reviews',
     'inspirational movies',
     'film analysis',
   ],
-  authors: [{ name: 'Animoto Editorial' }],
+  authors: [{ name: 'AnimoView Editorial' }],
 };
 
 export default function RootLayout({

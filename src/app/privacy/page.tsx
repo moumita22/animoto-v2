@@ -2,8 +2,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'Privacy Policy | Animoto',
-  description: 'Privacy Policy and Google AdSense cookie compliance for Animoto.',
+  title: 'Privacy Policy | AnimoView',
+  description: 'Privacy Policy and Google AdSense cookie compliance for AnimoView.',
 };
 
 export default function PrivacyPage() {
@@ -22,12 +22,12 @@ export default function PrivacyPage() {
 
         <div className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#12141e] border border-zinc-200 dark:border-zinc-800/80 shadow-sm space-y-6 text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
           <p>
-            At <strong>Animoto</strong>, accessible from https://animoto.com, the privacy of our visitors is one of our main priorities. This Privacy Policy document outlines the types of information that is collected and recorded by Animoto and how we use it.
+            At <strong>AnimoView</strong>, accessible from https://animoview.com, the privacy of our visitors is one of our main priorities. This Privacy Policy document outlines the types of information that is collected and recorded by AnimoView and how we use it.
           </p>
 
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white">Google AdSense &amp; Third-Party Advertising</h2>
           <p>
-            Google is a third-party vendor on our site. It uses cookies, commonly known as advertising and DART cookies, to serve ads to our site visitors based upon their visit to Animoto and other sites on the internet.
+            Google is a third-party vendor on our site. It uses cookies, commonly known as advertising and DART cookies, to serve ads to our site visitors based upon their visit to AnimoView and other sites on the internet.
           </p>
           <ul className="list-disc pl-5 space-y-2">
             <li>
@@ -71,7 +71,7 @@ export default function PrivacyPage() {
 
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white">Cookies &amp; How to Manage Them</h2>
           <p>
-            Animoto uses cookies to store information about visitors&apos; preferences, user-specific information on which pages the visitor accesses or visits, and to customize web page content based on visitors&apos; browser type or other information.
+            AnimoView uses cookies to store information about visitors&apos; preferences, user-specific information on which pages the visitor accesses or visits, and to customize web page content based on visitors&apos; browser type or other information.
           </p>
           <p>
             You can choose to disable cookies through your individual browser options. Detailed information about cookie management with specific web browsers can be found at the browsers&apos; respective websites:
@@ -85,7 +85,7 @@ export default function PrivacyPage() {
 
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white">Log Files &amp; Web Analytics</h2>
           <p>
-            Animoto follows a standard procedure of using log files. These files log visitors when they visit websites. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users&apos; movement on the website, and gathering demographic information.
+            AnimoView follows a standard procedure of using log files. These files log visitors when they visit websites. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users&apos; movement on the website, and gathering demographic information.
           </p>
 
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white">GDPR &amp; CCPA Data Protection Rights</h2>
@@ -96,19 +96,19 @@ export default function PrivacyPage() {
             <li><strong>The right to access:</strong> You have the right to request copies of your personal data.</li>
             <li><strong>The right to rectification:</strong> You have the right to request that we correct any information you believe is inaccurate.</li>
             <li><strong>The right to erasure:</strong> You have the right to request that we erase your personal data under certain conditions.</li>
-            <li><strong>The right to opt-out:</strong> California consumers have the right to request that a business not sell their personal information. Animoto does not sell personal information.</li>
+            <li><strong>The right to opt-out:</strong> California consumers have the right to request that a business not sell their personal information. AnimoView does not sell personal information.</li>
           </ul>
 
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white">Children&apos;s Information</h2>
           <p>
-            Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity. Animoto does not knowingly collect any Personal Identifiable Information from children under the age of 13.
+            Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity. AnimoView does not knowingly collect any Personal Identifiable Information from children under the age of 13.
           </p>
 
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white">Contact Us</h2>
           <p>
             If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us at{' '}
-            <a href="mailto:contact@animoto.com" className="text-amber-500 underline font-semibold">
-              contact@animoto.com
+            <a href="mailto:animoview.official@gmail.com" className="text-amber-500 underline font-semibold">
+              animoview.official@gmail.com
             </a>.
           </p>
         </div>

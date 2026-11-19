@@ -14,7 +14,7 @@ export interface SessionPayload {
 function getSecretKey(): string {
   return (
     process.env.SESSION_SECRET ||
-    'animoto-secure-secret-key-cinema-wisdom'
+    'animoview-secure-secret-key-cinema-wisdom'
   );
 }
 

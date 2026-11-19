@@ -3,8 +3,8 @@ import Footer from '@/components/Footer';
 import { Mail, MessageSquare } from 'lucide-react';
 
 export const metadata = {
-  title: 'Contact Us | Animoto',
-  description: 'Get in touch with the Animoto editorial team.',
+  title: 'Contact Us | AnimoView',
+  description: 'Get in touch with the AnimoView editorial team.',
 };
 
 export default function ContactPage() {
@@ -24,8 +24,8 @@ export default function ContactPage() {
             <Mail className="w-5 h-5 text-amber-500" />
             <div>
               <p className="text-xs text-zinc-400">Direct Email</p>
-              <a href="mailto:contact@animoto.com" className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-amber-500">
-                contact@animoto.com
+              <a href="mailto:animoview.official@gmail.com" className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-amber-500">
+                animoview.official@gmail.com
               </a>
             </div>
           </div>

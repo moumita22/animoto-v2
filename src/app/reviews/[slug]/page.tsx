@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!movie) {
     return {
-      title: 'Review Not Found | Animoto',
+      title: 'Review Not Found | AnimoView',
     };
   }
 
@@ -103,11 +103,11 @@ export default async function ReviewDetailPage({ params }: Props) {
     },
     author: {
       '@type': 'Person',
-      name: 'Animoto Editorial',
+      name: 'AnimoView Editorial',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Animoto',
+      name: 'AnimoView',
     },
     description: movie.synopsis,
     ...(trailerEmbedUrl && {
@@ -310,7 +310,7 @@ export default async function ReviewDetailPage({ params }: Props) {
                 <p className="text-[10px] text-zinc-400 dark:text-zinc-500 text-center mb-4 leading-tight">
                   Poster © by respective rights holders. Used under{' '}
                   <Link href="/terms#fair-use" className="underline hover:text-amber-500">
-                    Fair Use (17 U.S.C. § 107)
+                    Fair Use &amp; Fair Dealing (Sec. 52, ICA 1957)
                   </Link>.
                 </p>
 

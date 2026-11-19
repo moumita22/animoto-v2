@@ -2,8 +2,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'Terms of Service | Animoto',
-  description: 'Terms of Service, Fair Use Disclaimer, and DMCA policy for Animoto.',
+  title: 'Terms of Service | AnimoView',
+  description: 'Terms of Service, Fair Use Disclaimer, and DMCA policy for AnimoView.',
 };
 
 export default function TermsPage() {
@@ -22,25 +22,30 @@ export default function TermsPage() {
 
         <div className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#12141e] border border-zinc-200 dark:border-zinc-800/80 shadow-sm space-y-6 text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
           <p>
-            Welcome to <strong>Animoto</strong>. By accessing or using this website (https://animoto.com), you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use the website.
+            Welcome to <strong>AnimoView</strong>. By accessing or using this website (https://animoview.com), you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use the website.
           </p>
 
-          {/* Section 107 Fair Use Declaration */}
-          <section id="fair-use" className="scroll-mt-24 p-5 rounded-2xl bg-amber-500/5 dark:bg-amber-500/10 border border-amber-500/30">
-            <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-2 flex items-center gap-2">
-              <span>⚖️</span> Copyright &amp; Fair Use Disclaimer
+          {/* Fair Use & Fair Dealing Declaration (US 17 U.S.C. § 107 & India Section 52) */}
+          <section id="fair-use" className="scroll-mt-24 p-5 sm:p-6 rounded-2xl bg-amber-500/5 dark:bg-amber-500/10 border border-amber-500/30 space-y-3">
+            <h2 className="text-lg font-bold text-zinc-900 dark:text-white flex items-center gap-2">
+              <span>⚖️</span> Copyright, Fair Use &amp; Fair Dealing Disclaimer
             </h2>
-            <p className="font-medium text-zinc-800 dark:text-zinc-200 mb-3">
-              This website contains copyrighted material the use of which has not always been specifically authorized by the copyright owner. We are making such material available in our efforts to advance critical commentary, review, and educational understanding of cinematic arts and storytelling psychology.
+            <p className="font-medium text-zinc-800 dark:text-zinc-200">
+              This website contains copyrighted material the use of which has not always been specifically authorized by the copyright owner. We are making such material available in our efforts to advance critical commentary, review, and educational understanding of cinematic arts, storytelling psychology, and life philosophies.
             </p>
-            <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
-              We believe this constitutes a <strong>&quot;Fair Use&quot;</strong> of any such copyrighted material as provided for in <strong>Section 107 of the US Copyright Law (17 U.S. Code § 107)</strong>. In accordance with Title 17 U.S.C. Section 107, the material on this site is distributed without profit to those who have expressed a prior interest in receiving the included information for research, critique, and educational purposes.
-            </p>
+            <div className="space-y-2 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
+              <p>
+                <strong>1. United States Law (Fair Use):</strong> We believe this constitutes a <em>&quot;Fair Use&quot;</em> of any such copyrighted material as provided for in <strong>Section 107 of the US Copyright Law (17 U.S. Code § 107)</strong>. The material on this site is distributed without profit for research, critique, review, and educational purposes.
+              </p>
+              <p>
+                <strong>2. Indian Law (Fair Dealing):</strong> For Hindi, Indian, and regional cinematic works, the use of promotional stills, posters, trailers, and excerpts constitutes lawful <em>&quot;Fair Dealing&quot;</em> under <strong>Section 52(1)(a)(ii) of the Indian Copyright Act, 1957</strong>, which explicitly exempts fair dealing with any work for the purpose of <u>criticism or review</u>, whether of that work or of any other work.
+              </p>
+            </div>
           </section>
 
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white">Ownership of Original Intellectual Property</h2>
           <p>
-            All original editorial text, critical analysis, curated life learnings, score ratings, layouts, and logos published on Animoto are the exclusive intellectual property of Animoto. You may not republish, sell, or commercially reproduce whole articles without prior written permission.
+            All original editorial text, critical analysis, curated life learnings, score ratings, layouts, and logos published on AnimoView are the exclusive intellectual property of AnimoView. You may not republish, sell, or commercially reproduce whole articles without prior written permission.
           </p>
           <p>
             All film titles, promotional posters, trailers, backdrop stills, character names, and studio trademarks referenced on this website remain the registered property of their respective copyright and trademark owners (production companies, distributors, and filmmakers).
@@ -52,18 +57,18 @@ export default function TermsPage() {
               DMCA &amp; Content Takedown Policy
             </h2>
             <p>
-              Animoto respects the intellectual property rights of others and adheres to the Digital Millennium Copyright Act (DMCA). If you are a copyright owner or an agent thereof and believe that any promotional imagery, still, or media used on this site infringes upon your copyright beyond the scope of fair use, please notify us immediately.
+              AnimoView respects the intellectual property rights of others and adheres to the Digital Millennium Copyright Act (DMCA). If you are a copyright owner or an agent thereof and believe that any promotional imagery, still, or media used on this site infringes upon your copyright beyond the scope of fair use, please notify us immediately.
             </p>
             <p className="mt-2">
               To submit a notice, please email{' '}
-              <a href="mailto:contact@animoto.com" className="text-amber-500 underline font-semibold">
-                contact@animoto.com
+              <a href="mailto:animoview.official@gmail.com" className="text-amber-500 underline font-semibold">
+                animoview.official@gmail.com
               </a>{' '}
               with the subject line &quot;DMCA Takedown Request&quot; and include:
             </p>
             <ul className="list-disc pl-5 mt-2 space-y-1 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
               <li>A description of the copyrighted work claimed to have been infringed.</li>
-              <li>The exact URL on Animoto where the material is located.</li>
+              <li>The exact URL on AnimoView where the material is located.</li>
               <li>Your contact information (name, organization, and email address).</li>
               <li>A statement that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law.</li>
             </ul>
@@ -74,12 +79,12 @@ export default function TermsPage() {
 
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white">Editorial Disclaimer</h2>
           <p>
-            The reviews, analyses, scores, and life learnings presented on Animoto represent the subjective perspectives of our editorial staff. They are intended for entertainment, inspiration, and critical discussion. We make no guarantees that your viewing experience or personal interpretation will mirror ours.
+            The reviews, analyses, scores, and life learnings presented on AnimoView represent the subjective perspectives of our editorial staff. They are intended for entertainment, inspiration, and critical discussion. We make no guarantees that your viewing experience or personal interpretation will mirror ours.
           </p>
 
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white">Limitation of Liability</h2>
           <p>
-            In no event shall Animoto, its creators, or affiliates be liable for any indirect, incidental, or consequential damages arising out of your access to or use of this website. All services and content are provided on an &quot;as is&quot; and &quot;as available&quot; basis without warranties of any kind.
+            In no event shall AnimoView, its creators, or affiliates be liable for any indirect, incidental, or consequential damages arising out of your access to or use of this website. All services and content are provided on an &quot;as is&quot; and &quot;as available&quot; basis without warranties of any kind.
           </p>
 
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white">Modifications to Terms</h2>
@@ -90,8 +95,8 @@ export default function TermsPage() {
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white">Contact Information</h2>
           <p>
             If you have any questions regarding these Terms, please reach out to us at{' '}
-            <a href="mailto:contact@animoto.com" className="text-amber-500 underline font-semibold">
-              contact@animoto.com
+            <a href="mailto:animoview.official@gmail.com" className="text-amber-500 underline font-semibold">
+              animoview.official@gmail.com
             </a>.
           </p>
         </div>

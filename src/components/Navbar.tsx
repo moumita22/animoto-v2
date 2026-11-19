@@ -31,7 +31,7 @@ export default function Navbar({ initialSearch = '' }: { initialSearch?: string 
             </div>
             <div>
               <span className="font-extrabold text-lg sm:text-xl tracking-tight text-zinc-900 dark:text-white flex items-center gap-1.5">
-                Animoto
+                AnimoView
                 <span className="text-xs font-semibold px-1.5 py-0.5 rounded-full bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20">
                   Reviews &amp; Learnings
                 </span>

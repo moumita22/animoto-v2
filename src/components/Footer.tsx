@@ -16,7 +16,7 @@ export default function Footer() {
                 <Film className="w-4 h-4 text-zinc-950" />
               </div>
               <span className="font-extrabold text-lg text-zinc-900 dark:text-white">
-                Animoto
+                AnimoView
               </span>
             </Link>
             <p className="text-sm text-zinc-500 dark:text-zinc-400 max-w-sm leading-relaxed">
@@ -76,11 +76,11 @@ export default function Footer() {
 
         {/* Bottom copyright and disclaimer */}
         <div className="pt-8 border-t border-zinc-200 dark:border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-400 dark:text-zinc-500 gap-4">
-          <p>© 2026 Animoto. All rights reserved.</p>
+          <p>© 2026 AnimoView. All rights reserved.</p>
           <p className="text-center sm:text-right text-[11px] max-w-xl text-zinc-500 dark:text-zinc-400">
             Movie titles, posters, stills, and trademarks are property of their respective copyright holders, used under{' '}
             <Link href="/terms#fair-use" className="text-amber-500 underline hover:text-amber-400 font-medium">
-              Fair Use (17 U.S.C. § 107)
+              Fair Use (17 U.S.C. § 107) &amp; Fair Dealing (Sec. 52, Indian Copyright Act 1957)
             </Link>{' '}
             for critical commentary, review, and educational purposes.
           </p>

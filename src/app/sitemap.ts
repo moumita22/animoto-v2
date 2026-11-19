@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { prisma } from '@/lib/prisma';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://animoto.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://animoview.com';
 
   let movies: { slug: string; updatedAt: Date }[] = [];
   try {

@@ -20,7 +20,7 @@ function prompt(question) {
 
 async function main() {
   console.log('================================================');
-  console.log('       Animoto - Admin Account Generator        ');
+  console.log('      AnimoView - Admin Account Generator       ');
   console.log('================================================\n');
 
   let username = process.argv[2];
