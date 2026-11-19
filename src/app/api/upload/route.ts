@@ -1,7 +1,40 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { writeFile, mkdir } from 'fs/promises';
 import path from 'path';
+import { v2 as cloudinary, UploadApiResponse } from 'cloudinary';
 import { validateAdminApiRequest, setAdminCookie } from '@/lib/auth';
+
+// Configure Cloudinary from environment
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+  secure: true,
+});
+
+/**
+ * Uploads a buffer directly to Cloudinary using upload_stream
+ */
+function uploadToCloudinary(buffer: Buffer, publicId: string): Promise<UploadApiResponse> {
+  return new Promise((resolve, reject) => {
+    const uploadStream = cloudinary.uploader.upload_stream(
+      {
+        folder: 'animoview/reviews',
+        public_id: publicId,
+        resource_type: 'image',
+        format: 'webp',
+      },
+      (error, result) => {
+        if (error || !result) {
+          reject(error || new Error('Cloudinary upload returned no result'));
+        } else {
+          resolve(result);
+        }
+      }
+    );
+    uploadStream.end(buffer);
+  });
+}
 
 export async function POST(request: NextRequest) {
   const auth = await validateAdminApiRequest(request);
@@ -41,17 +74,30 @@ export async function POST(request: NextRequest) {
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    // Clean sanitized filename: timestamp + random alphanumeric + verified extension
-    const cleanName = `${Date.now()}-${Math.random().toString(36).substring(2, 8)}${ext}`;
-    
-    // Save to public/uploads
-    const uploadDir = path.join(process.cwd(), 'public', 'uploads');
-    await mkdir(uploadDir, { recursive: true });
-    
-    const filePath = path.join(uploadDir, cleanName);
-    await writeFile(filePath, buffer);
+    // Clean sanitized filename / public_id
+    const randomSuffix = Math.random().toString(36).substring(2, 8);
+    const cleanId = `${Date.now()}-${randomSuffix}`;
+    const cleanFilename = `${cleanId}${ext}`;
 
-    const publicUrl = `/uploads/${cleanName}`;
+    let publicUrl = '';
+
+    // If Cloudinary credentials are configured, upload to Cloudinary CDN
+    if (
+      process.env.CLOUDINARY_CLOUD_NAME &&
+      process.env.CLOUDINARY_API_KEY &&
+      process.env.CLOUDINARY_API_SECRET
+    ) {
+      const uploadResult = await uploadToCloudinary(buffer, cleanId);
+      publicUrl = uploadResult.secure_url;
+    } else {
+      // Fallback to local public/uploads (e.g. offline local dev)
+      const uploadDir = path.join(process.cwd(), 'public', 'uploads');
+      await mkdir(uploadDir, { recursive: true });
+      const filePath = path.join(uploadDir, cleanFilename);
+      await writeFile(filePath, buffer);
+      publicUrl = `/uploads/${cleanFilename}`;
+    }
+
     const response = NextResponse.json({ url: publicUrl });
     // Slide 40-minute window forward
     setAdminCookie(response, auth.refreshedToken);
