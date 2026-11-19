@@ -73,7 +73,7 @@ async function main() {
     const salt = await bcrypt.genSalt(10);
     const hash = await bcrypt.hash(defaultPassword, salt);
     await prisma.$executeRawUnsafe(
-      `INSERT INTO admin_users (username, password_hash) VALUES ($1, $2);`,
+      `INSERT INTO admin_users (username, password_hash, created_at, updated_at) VALUES ($1, $2, NOW(), NOW());`,
       'admin',
       hash
     );
